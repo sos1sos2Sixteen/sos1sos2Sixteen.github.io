@@ -8,6 +8,7 @@ def main() :
     parser = argparse.ArgumentParser()
     parser.add_argument('webpage', type=str)
     parser.add_argument('contents', type=str)
+    parser.add_argument('out', type=str)
     args = parser.parse_args()
 
     with open(args.webpage) as f : 
@@ -22,7 +23,7 @@ def main() :
         print(f'abort with : {e}')
         exit(0)
     
-    with open(os.path.join(os.path.dirname(args.webpage), f'c-{os.path.basename(args.webpage)}'), 'w') as f : 
+    with open(args.out, 'w') as f : 
         f.write(mapped_page)
 
 

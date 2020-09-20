@@ -1,7 +1,7 @@
 {
-    "raw_1": "audios/raw/raw1",
-    "raw_2": "audios/raw/raw2",
-    "raw_3": "audios/raw/raw3",
+    "raw_1": "audios/raw/raw1.wav",
+    "raw_2": "audios/raw/raw2.wav",
+    "raw_3": "audios/raw/raw3.wav",
 
 
     "recon_org_1": "audios/recon/recon_org_5.wav",
