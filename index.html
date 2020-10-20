@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>AISHELL-SSB Baseline Samples</title>
+  <title>AISHELL-3 Baseline Samples</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
@@ -17,43 +17,43 @@
 <body class="py-4" style='font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;'>
   <div class="container">
 
-    <h1 class='display-3'> <span class='text-warning'>Site Under Construction:</span><br/> AISHELL-SSB Dataset: <br/> Baseline System Samples</h1>
-    <p class='lead'>arxiv: <a href="www.baidu.com">xxxxx.x</a></p>
+    <h1 class='display-3'> <span class='text-warning'>Site Under Construction:</span><br/> AISHELL-3 Corpus: <br/> Baseline System Samples</h1>
+    <p class='lead'>
+      Arxiv: <a href="#">xxxxx.x</a>  </br>
+      Dataset Download: <a href="https://www.aishelltech.com/aishell_3">on AISHELL's site</a> </br>
+      Github Repo: <a href="https://github.com/sos1sos2Sixteen/aishell-3-baseline-fc">sos1sos2Sixteen/aishell-3-baseline-fc</a>
+    </p>
+    <p class='lead'></p>
     <br/>
 
     <h2 id="authors">Authors</h2>
     <ul class='lead'>
-        <li>SHI Yao (Wuhan University) ······ <a href="mailto:ys297@dku.edu.cn">ys297@dku.edu.cn</a></li>
+        <li>SHI, Yao (Wuhan University, Duke-Kunshan University)</li>
+
+        <li>BU, Hui (Aishell)</li>
+        <li>XU, Xin (Aishell)</li>
+        <li>ZHANG, Shaoji (Aishell)</li>
         
-        <li>LI Ming (Duke-Kunshan University) ······ <a href="mailto:ming.li369@duke.edu">ming.li369@duke.edu</a></li>
+        <li>LI, Ming (Duke-Kunshan University, Wuhan University) ······ <a href="mailto:ming.li369@dukekunshan.edu">ming.li369@dukekunshan.edu</a></li>
     </ul>
 
     <h2>Abstract</h2>
     <p>
-      &nbsp&nbsp&nbsp In this paper, we present AISHELL-SSB dataset, a new publicly available 
-      high-fidelity multi-speaker Mandarin Chinese audio dataset 
-      which could be used to train multi-speaker Text-to-Speech (TTS) systems. 
-      The dataset contains roughly 90 hours of emotion-neutral Mandarin Chinese recordings 
-      spoken by 218 amateur native speakers whose auxiliary attributes such as gender, 
-      age group and native accents are explicitly marked. 
-      all of which are accompanied by hand annotated pinyin and Chinese character transcripts.
-
-      We trained a baseline multi-speaker TTS system using this dataset. 
-      The acoustic model of the baseline system is based on Tacotron-2 
-      and follows the modification of the recently published work on speaker embedding feedback-constraint 
-      which enables the model to produce samples that are more stable in speaker identity. 
-      The system trained on this dataset also generalizes well on speakers 
-      that are never seen in the training process, 
-      with an embedding cosine similarity drop of 0.04 and 0.08 on text dependent 
-      and independent trials when feedback-constraint is applied, 
-      which is consistent with previous experiments conducted on the VCTK dataset.~
-      
-      The dataset and baseline system samples are made publicly available online. [<a href="#">link</a>]
+      &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp In this paper, we present AISHELL-3, a large-scale and high-fidelity multi-speaker Mandarin speech corpus which could be used to train multi-speaker Text-to-Speech (TTS) systems. 
+      The corpus contains roughly 85 hours of emotion-neutral recordings spoken by 218 native Chinese mandarin speakers. 
+      Their auxiliary attributes such as gender, age group and native accents are explicitly marked and provided in the corpus. 
+      Accordingly, transcripts in Chinese character-level and pinyin-level are provided along with the recordings. 
+      We present a baseline system that uses AISHELL-3 for multi-speaker Madarin speech synthesis. 
+      The multi-speaker speech synthesis system is an extension on Tacotron-2 where a speaker verification model and a corresponding loss regarding voice similarity are incorporated as the feedback constraint. 
+      We aim to use the presented corpus to build a robust synthesis model that is able to achieve zero-shot or one-shot voice cloning. 
+      The system trained on this dataset also generalizes well on speakers that are never seen in the training process. 
+      Objective evaluation results from our experiments show that the proposed multi-speaker synthesis system achieves high voice similarity concerning both speaker embedding similarity and equal error rate measurement. 
+      The dataset, baseline system code and generated samples are available online.
     </p>
 
     <br/>
     <h2>Dataset Samples</h2>
-    <p>Sample audios and labels from the AISHELL-SSB dataset (in original 44.1kHz format)</p>
+    <p>Sample audios and labels from the AISHELL-3 dataset (in original 44.1kHz format)</p>
 
     <div class="row mb-3">
       <div class="col-md-4 audio-box">
@@ -375,17 +375,19 @@
     <figure class='figure'>
         <img src="assets/tsne_figure.png" class="figure-img img-fluid rounded" />
         <figcaption class='figure-caption'>
-          t-SNE plot of speaker embeddings extracted from audio samples synthesized & real.
-          points for recordings are represented with dots, synthesized samples with crosses.
-          (A)recordings of train-set speakers.
-          (B)recordings and synthesized samples for train-set speakers.
-          (C)recordings of test-set speakers.
-          (D)recordings and syntehsized samples for test-set speakers
+          Speaker embedding visualization using t-SNE, 
+          embeddings extracted from audio recordings are represented with dots, synthesized with crosses. 
+          From left to right: 
+          (A) validation-set recordings; 
+          (B) validation-set recordings & synthesized; 
+          (C) test-set recordings; 
+          (D) test-set recordings & synthesized. 
+          Please note that the validation set contains seen speakers while the test-set only includes unseen ones.
         </figcaption>
     </figure>
 
 
-    <div class='row mb-3'> <div class="col-md-12 audio-box">Train-set Speakers</div> </div>
+    <div class='row mb-3'> <div class="col-md-12 audio-box">Validation-set Speakers</div> </div>
     <div class="row mb-3">
       <div class="col-md-6 audio-box">
         Original Voice
