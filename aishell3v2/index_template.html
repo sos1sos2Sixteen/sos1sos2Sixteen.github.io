@@ -17,12 +17,15 @@
 <body class="py-4" style='font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;'>
   <div class="container">
 
-    <h1 class='display-3'> <span class='text-warning'>AISHELL-3 Corpus:</span><br/> Baseline System Samples</h1>
+    <h4 class='display-5'><span class='text-warning'>Supplementary Samples for</span></h1>
+    <h1 class='display-3'> <span class='text-warning'>AISHELL-3:</span></h1>
+    <h1 class="display-4">A Multi-Speaker Mandarin TTS Corpus</h1>
     <p class='lead'>
-      Arxiv: <a href="https://arxiv.org/abs/2010.11567">2010.11567</a>  </br>
-      Github Repo: <a href="https://github.com/sos1sos2Sixteen/aishell-3-baseline-fc">sos1sos2Sixteen/aishell-3-baseline-fc</a>  </br>
+      <!-- Arxiv: <a href="https://arxiv.org/abs/2010.11567">2010.11567</a>  </br> -->
+      <!-- Github Repo: <a href="https://github.com/sos1sos2Sixteen/aishell-3-baseline-fc">sos1sos2Sixteen/aishell-3-baseline-fc</a>  </br> -->
       OpenSLR: <a href="http://www.openslr.org/93/">www.openslr.org/93/</a> </br>
       Dataset Download: <a href="http://www.aishelltech.com/aishell_3">www.aishelltech.com/aishell_3</a> </br>
+      Link to v1 version: <a href="http://sos1sos2Sixteen.github.io/aishell3">sos1sos2Sixteen.github.io/aishell3</a> </br>
       For further questions regarding the dataset: <a href="mailto:tech@aishelldata.com">tech@aishelldata.com</a>
     </p>
     <p class='lead'></p>
@@ -41,18 +44,18 @@
 
     <h2>Abstract</h2>
     <p>
-      &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp In this paper, we present AISHELL-3, a large-scale and high-fidelity multi-speaker Mandarin speech corpus which could be used to train multi-speaker Text-to-Speech (TTS) systems. 
-      The corpus contains roughly 85 hours of emotion-neutral recordings spoken by 218 native Chinese mandarin speakers. 
+
+      &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp In this paper, we present AISHELL-3, a large-scale multi-speaker Mandarin speech corpus which could be used to train multi-speaker Text-To-Speech (TTS) systems. 
+      The corpus contains roughly 85 hours of emotion-neutral recordings spanning across 218 native Chinese mandarin speakers. 
       Their auxiliary attributes such as gender, age group and native accents are explicitly marked and provided in the corpus. 
-      Accordingly, transcripts in Chinese character-level and pinyin-level are provided along with the recordings. 
-      We present a baseline system that uses AISHELL-3 for multi-speaker Madarin speech synthesis. 
-      The multi-speaker speech synthesis system is an extension on Tacotron-2 where a speaker verification model and a corresponding loss regarding voice similarity are incorporated as the feedback constraint. 
-      We aim to use the presented corpus to build a robust synthesis model that is able to achieve zero-shot voice cloning. 
-      The system trained on this dataset also generalizes well on speakers that are never seen in the training process. 
-      Objective evaluation results from our experiments show that the proposed multi-speaker synthesis system achieves high voice similarity concerning both speaker embedding similarity and equal error rate measurement. 
-      The dataset, baseline system code and generated samples are available online.
+      Moreover, transcripts in Chinese character-level and pinyin-level are provided along with the recordings. 
+      We also present some data processing strategies and techniques which match with the characteristics of the presented corpus and conduct experiments on multiple speech-synthesis systems to assess the quality of the generated speech samples, 
+      showing promising results. The corpus is available online at openslr.org/93/ under Apache v2.0 license.
+
     </p>
 
+
+    
     <br/>
     <h2>Dataset Samples</h2>
     <p>Sample audios and labels from the AISHELL-3 dataset (in original 44.1kHz format)</p>
@@ -69,7 +72,7 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/raw/raw1.wav" autoplay />
+          <source src="{raw_1}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -82,7 +85,7 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/raw/raw2.wav" autoplay />
+          <source src="{raw_2}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -95,7 +98,7 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/raw/raw3.wav" autoplay />
+          <source src="{raw_3}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -111,75 +114,6 @@
       The following sections exhibits audio samples generated by the Baseline TTS system described in detail in our paper.
       (in down-sampled 16kHz format)
     </p>
-
-    <table style="border-collapse: collapse; border: none; border-spacing: 0px;">
-      <tr>
-        <td style="border-top-width: 2px; border-top-style: solid; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-        </td>
-        <td colspan="2" style="border-top-width: 2px; border-top-style: solid; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          natualness
-        </td>
-        <td colspan="2" style="border-top-width: 2px; border-top-style: solid; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          similarity
-        </td>
-      </tr>
-      <tr>
-        <td style="border-top-width: 1px; border-top-style: solid; border-top-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          dataset
-        </td>
-        <td style="border-top-width: 1px; border-top-style: solid; border-top-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          val
-        </td>
-        <td style="border-top-width: 1px; border-top-style: solid; border-top-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          test
-        </td>
-        <td style="border-top-width: 1px; border-top-style: solid; border-top-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          val
-        </td>
-        <td style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          test
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          original(16k)
-        </td>
-        <td colspan="2" style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          4.56(±0.07)
-        </td>
-        <td colspan="2" style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          ~
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          vocoded
-        </td>
-        <td colspan="2" style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          4.16(±0.08)
-        </td>
-        <td colspan="2" style="text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          4.38(±0.09)
-        </td>
-      </tr>
-      <tr>
-        <td style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          synthesized
-        </td>
-        <td style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          3.78(±0.1)
-        </td>
-        <td style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          3.95(±0.09)
-        </td>
-        <td style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          3.28(±0.1)
-        </td>
-        <td style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); text-align: center; padding-right: 3pt; padding-left: 3pt;">
-          3.12(±0.01)
-        </td>
-      </tr>
-    </table>
 
     <h3>Vocoder Mel-Reconstruction</h3>
     <p>
@@ -205,63 +139,63 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_org_5.wav" autoplay />
+          <source src="{recon_org_1}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_5.wav" autoplay />
+          <source src="{recon_1}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">一股脑倒给了现场的观众们</div>
+      <div class="col-md-4 audio-box">{recon_text_1}</div>
     </div>
 
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_org_2.wav" autoplay />
+          <source src="{recon_org_2}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_2.wav" autoplay />
+          <source src="{recon_2}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">想听一下邓紫棋的歌</div>
+      <div class="col-md-4 audio-box">{recon_text_2}</div>
     </div>
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_org_3.wav" autoplay />
+          <source src="{recon_org_3}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_3.wav" autoplay />
+          <source src="{recon_3}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">在中国官方轰轰烈烈纪念抗日战争胜利七十周年之际</div>
+      <div class="col-md-4 audio-box">{recon_text_3}</div>
     </div>
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_org_4.wav" autoplay />
+          <source src="{recon_org_4}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/recon/recon_4.wav" autoplay />
+          <source src="{recon_4}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">本身是难度比较大的事</div>
+      <div class="col-md-4 audio-box">{recon_text_4}</div>
     </div>
 
     <h3>Text-dependent Synthesis</h3>
@@ -282,78 +216,78 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_org_1.wav" autoplay />
+          <source src="{ps_org_1}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_1.wav" autoplay />
+          <source src="{ps_1}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">张大千国画有什么</div>
+      <div class="col-md-4 audio-box">{ps_text_1}</div>
     </div>
 
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_org_2.wav" autoplay />
+          <source src="{ps_org_2}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_2.wav" autoplay />
+          <source src="{ps_2}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">目前北京市有旗胜家园、万科、红狮等数个限价房小区</div>
+      <div class="col-md-4 audio-box">{ps_text_2}</div>
     </div>
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_org_3.wav" autoplay />
+          <source src="{ps_org_3}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_3.wav" autoplay />
+          <source src="{ps_3}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">你对我所做的一切</div>
+      <div class="col-md-4 audio-box">{ps_text_3}</div>
     </div>
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_org_6.wav" autoplay />
+          <source src="{ps_org_4}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_6.wav" autoplay />
+          <source src="{ps_4}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">一二六八零三七九六七一</div>
+      <div class="col-md-4 audio-box">{ps_text_4}</div>
     </div>
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_org_5.wav" autoplay />
+          <source src="{ps_org_5}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-4 audio-box">
         <audio controls="controls">
-          <source src="audios/parallel/ps_5.wav" autoplay />
+          <source src="{ps_5}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
-      <div class="col-md-4 audio-box">楼市回暖也不可能回到以前的发展高度</div>
+      <div class="col-md-4 audio-box">{ps_text_5}</div>
     </div>
 
 
@@ -372,13 +306,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_org_1.wav" autoplay />
+          <source src="{cs_org_1}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_1.wav" autoplay />
+          <source src="{cs_1}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -387,13 +321,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_org_2.wav" autoplay />
+          <source src="{cs_org_2}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_2.wav" autoplay />
+          <source src="{cs_2}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -401,13 +335,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_org_3.wav" autoplay />
+          <source src="{cs_org_3}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_3.wav" autoplay />
+          <source src="{cs_3}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -415,13 +349,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_org_4.wav" autoplay />
+          <source src="{cs_org_4}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_4.wav" autoplay />
+          <source src="{cs_4}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -429,13 +363,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_org_5.wav" autoplay />
+          <source src="{cs_org_5}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/cs/cs_5.wav" autoplay />
+          <source src="{cs_5}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -471,13 +405,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_org_1.wav" autoplay />
+          <source src="{st_org_1}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_1.wav" autoplay />
+          <source src="{st_1}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -486,13 +420,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_org_2.wav" autoplay />
+          <source src="{st_org_2}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_2.wav" autoplay />
+          <source src="{st_2}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -500,13 +434,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_org_3.wav" autoplay />
+          <source src="{st_org_3}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_3.wav" autoplay />
+          <source src="{st_3}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -514,13 +448,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_org_4.wav" autoplay />
+          <source src="{st_org_4}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_4.wav" autoplay />
+          <source src="{st_4}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -528,13 +462,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_org_5.wav" autoplay />
+          <source src="{st_org_5}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/train_speakers/t_5.wav" autoplay />
+          <source src="{st_5}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -542,13 +476,13 @@
     <div class="row mb-3 themed-grid-row">
         <div class="col-md-6 audio-box">
           <audio controls="controls">
-            <source src="audios/train_speakers/t_org_6.wav" autoplay />
+            <source src="{st_org_6}" autoplay />
             Your browser does not support the audio element.
           </audio>
         </div>
         <div class="col-md-6 audio-box">
           <audio controls="controls">
-            <source src="audios/train_speakers/t_6.wav" autoplay />
+            <source src="{st_6}" autoplay />
             Your browser does not support the audio element.
           </audio>      
         </div>
@@ -556,13 +490,13 @@
       <div class="row mb-3 themed-grid-row">
         <div class="col-md-6 audio-box">
           <audio controls="controls">
-            <source src="audios/train_speakers/t_org_7.wav" autoplay />
+            <source src="{st_org_7}" autoplay />
             Your browser does not support the audio element.
           </audio>
         </div>
         <div class="col-md-6 audio-box">
           <audio controls="controls">
-            <source src="audios/train_speakers/t_7.wav" autoplay />
+            <source src="{st_7}" autoplay />
             Your browser does not support the audio element.
           </audio>      
         </div>
@@ -581,13 +515,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_org_1.wav" autoplay />
+          <source src="{sv_org_1}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_1.wav" autoplay />
+          <source src="{sv_1}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -596,13 +530,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_org_2.wav" autoplay />
+          <source src="{sv_org_2}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_2.wav" autoplay />
+          <source src="{sv_2}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -610,13 +544,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_org_3.wav" autoplay />
+          <source src="{sv_org_3}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_3.wav" autoplay />
+          <source src="{sv_3}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -624,13 +558,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_org_4.wav" autoplay />
+          <source src="{sv_org_4}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_4.wav" autoplay />
+          <source src="{sv_4}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -638,13 +572,13 @@
     <div class="row mb-3 themed-grid-row">
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_org_5.wav" autoplay />
+          <source src="{sv_org_5}" autoplay />
           Your browser does not support the audio element.
         </audio>
       </div>
       <div class="col-md-6 audio-box">
         <audio controls="controls">
-          <source src="audios/test_speakers/v_5.wav" autoplay />
+          <source src="{sv_5}" autoplay />
           Your browser does not support the audio element.
         </audio>      
       </div>
@@ -652,13 +586,13 @@
     <div class="row mb-3 themed-grid-row">
         <div class="col-md-6 audio-box">
           <audio controls="controls">
-            <source src="audios/test_speakers/v_org_6.wav" autoplay />
+            <source src="{sv_org_6}" autoplay />
             Your browser does not support the audio element.
           </audio>
         </div>
         <div class="col-md-6 audio-box">
           <audio controls="controls">
-            <source src="audios/test_speakers/v_6.wav" autoplay />
+            <source src="{sv_6}" autoplay />
             Your browser does not support the audio element.
           </audio>      
         </div>
