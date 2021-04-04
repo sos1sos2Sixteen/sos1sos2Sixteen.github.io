@@ -17,588 +17,339 @@
 <body class="py-4" style='font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;'>
   <div class="container">
 
-    <h4 class='display-5'><span class='text-warning'>Supplementary Samples for</span></h1>
-    <h1 class='display-3'> <span class='text-warning'>AISHELL-3:</span></h1>
-    <h1 class="display-4">A Multi-Speaker Mandarin TTS Corpus</h1>
-    <p class='lead'>
-      <!-- Arxiv: <a href="https://arxiv.org/abs/2010.11567">2010.11567</a>  </br> -->
-      <!-- Github Repo: <a href="https://github.com/sos1sos2Sixteen/aishell-3-baseline-fc">sos1sos2Sixteen/aishell-3-baseline-fc</a>  </br> -->
-      OpenSLR: <a href="http://www.openslr.org/93/">www.openslr.org/93/</a> </br>
-      Dataset Download: <a href="http://www.aishelltech.com/aishell_3">www.aishelltech.com/aishell_3</a> </br>
-      Link to v1 version: <a href="http://sos1sos2Sixteen.github.io/aishell3">sos1sos2Sixteen.github.io/aishell3</a> </br>
-      For further questions regarding the dataset: <a href="mailto:tech@aishelldata.com">tech@aishelldata.com</a>
-    </p>
-    <p class='lead'></p>
-    <br/>
+    <h4 class='display-5'><span class='text-warning'>V2 Supplementary Samples for</span></h1>
+      <h1 class='display-3'> <span class='text-warning'>AISHELL-3:</span></h1>
+      <h1 class="display-4">A Multi-Speaker Mandarin TTS Corpus</h1>
+      <p class='lead'>
+        <!-- Arxiv: <a href="https://arxiv.org/abs/2010.11567">2010.11567</a>  </br> -->
+        <!-- Github Repo: <a href="https://github.com/sos1sos2Sixteen/aishell-3-baseline-fc">sos1sos2Sixteen/aishell-3-baseline-fc</a>  </br> -->
+        OpenSLR: <a href="http://www.openslr.org/93/">www.openslr.org/93/</a> </br>
+        Dataset Download: <a href="http://www.aishelltech.com/aishell_3">www.aishelltech.com/aishell_3</a> </br>
+        Link to v1 version: <a href="http://sos1sos2Sixteen.github.io/aishell3">sos1sos2Sixteen.github.io/aishell3</a>
+        </br>
+        For further questions regarding the dataset: <a href="mailto:tech@aishelldata.com">tech@aishelldata.com</a>
+      </p>
+      <p class='lead'></p>
+      <br />
 
-    <h2 id="authors">Authors</h2>
-    <ul class='lead'>
+      <h2 id="authors">Authors</h2>
+      <ul class='lead'>
         <li>SHI, Yao (Wuhan University, Duke-Kunshan University)</li>
 
         <li>BU, Hui (AISHELL)</li>
         <li>XU, Xin (AISHELL)</li>
         <li>ZHANG, Shaoji (AISHELL)</li>
-        
-        <li>LI, Ming (Duke-Kunshan University, Wuhan University) ······ <a href="mailto:ming.li369@dukekunshan.edu">ming.li369@dukekunshan.edu</a></li>
-    </ul>
 
-    <h2>Abstract</h2>
-    <p>
+        <li>LI, Ming (Duke-Kunshan University, Wuhan University) ······ <a
+            href="mailto:ming.li369@dukekunshan.edu">ming.li369@dukekunshan.edu</a></li>
+      </ul>
 
-      &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp In this paper, we present AISHELL-3, a large-scale multi-speaker Mandarin speech corpus which could be used to train multi-speaker Text-To-Speech (TTS) systems. 
-      The corpus contains roughly 85 hours of emotion-neutral recordings spanning across 218 native Chinese mandarin speakers. 
-      Their auxiliary attributes such as gender, age group and native accents are explicitly marked and provided in the corpus. 
-      Moreover, transcripts in Chinese character-level and pinyin-level are provided along with the recordings. 
-      We also present some data processing strategies and techniques which match with the characteristics of the presented corpus and conduct experiments on multiple speech-synthesis systems to assess the quality of the generated speech samples, 
-      showing promising results. The corpus is available online at openslr.org/93/ under Apache v2.0 license.
+      <h2>Abstract</h2>
+      <p>
 
-    </p>
+        &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp In this paper, we present AISHELL-3, a large-scale multi-speaker Mandarin speech
+        corpus which could be used to train multi-speaker Text-To-Speech (TTS) systems.
+        The corpus contains roughly 85 hours of emotion-neutral recordings spanning across 218 native Chinese mandarin
+        speakers.
+        Their auxiliary attributes such as gender, age group and native accents are explicitly marked and provided in
+        the corpus.
+        Moreover, transcripts in Chinese character-level and pinyin-level are provided along with the recordings.
+        We also present some data processing strategies and techniques which match with the characteristics of the
+        presented corpus and conduct experiments on multiple speech-synthesis systems to assess the quality of the
+        generated speech samples,
+        showing promising results. The corpus is available online at openslr.org/93/ under Apache v2.0 license.
 
-
-    
-    <br/>
-    <h2>Dataset Samples</h2>
-    <p>Sample audios and labels from the AISHELL-3 dataset (in original 44.1kHz format)</p>
-
-    <div class="row mb-3">
-      <div class="col-md-4 audio-box">
-        Sample Audios
-      </div>
-      <div class="col-md-8 audio-box">
-        Labels
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{raw_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-8 audio-box">
-        在教学楼内释放大量烟雾 <br/>
-        zai4 jiao4 xue2 lou2 nei4 shi4 fang4 da4 liang4 yan1 wu4
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{raw_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-8 audio-box">
-        不过英特尔之后不会继续接受如此大的损失  </br>
-        bu2 guo4 ying1 te4 er3 zhi1 hou4 bu2 hui4 ji4 xu4 jie1 shou4 ru2 ci3 da4 de5 sun3 shi1
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{raw_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-8 audio-box">
-        替我播放相思风雨中 <br/>
-        ti4 wo3 bo1 fang4 xiang1 si1 feng1 yu3 zong1
-      </div>
-    </div>
-    
-    <br/>
-    <h2> Baseline System Samples </h2>
-    <p class='lead'> 
-      The following sections exhibits audio samples generated by the Baseline TTS system described in detail in our paper.
-      (in down-sampled 16kHz format)
-    </p>
-
-    <h3>Vocoder Mel-Reconstruction</h3>
-    <p>
-      We use a 16kHz MelGAN trained on the presented dataset as our neural vocoder module.
-      listed below are pairs of original audio samples and their Mel-reconstructed counter-parts,
-      which intuitively demonstrates the performance of the vocoder used to produce the synthesized voices
-      presented in this web page.
-    </p>
-
-    <div class="row mb-3">
-      <div class="col-md-4 audio-box">
-        Original Voice
-      </div>
-      <div class="col-md-4 audio-box">
-        Mel-Reconstructed Voice
-      </div>
-      <div class="col-md-4 audio-box">
-        Text
-      </div>
-
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_org_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{recon_text_1}</div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_org_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{recon_text_2}</div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_org_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{recon_text_3}</div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_org_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{recon_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{recon_text_4}</div>
-    </div>
-
-    <h3>Text-dependent Synthesis</h3>
-    below are pairs of original recordings and synthesized samples 
-    conditioning on the same text and speaker embeddings (not ground-truth aligend samples),
-    all of the reference audios are separated from the training data:
-
-    <div class="row mb-3">
-      <div class="col-md-4 audio-box">
-        Original Voice
-      </div>
-      <div class="col-md-4 audio-box">
-        Parallel Synthesis
-      </div>
-      <div class="col-md-4 audio-box">Text</div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_org_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{ps_text_1}</div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_org_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{ps_text_2}</div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_org_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{ps_text_3}</div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_org_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{ps_text_4}</div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_org_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-4 audio-box">
-        <audio controls="controls">
-          <source src="{ps_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-      <div class="col-md-4 audio-box">{ps_text_5}</div>
-    </div>
+      </p>
 
 
-    <h3>Free-form Synthesis</h3>
-    Below are synthesized samples where the textual contents are an excerpt of a random customer-service phone call. 
-   
-    <div class="row mb-3">
-      <div class="col-md-6 audio-box">
-        Original Voice
-      </div>
-      <div class="col-md-6 audio-box">
-        Out-of-domain Sentence
-      </div>
-    </div>
 
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_org_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
+      <br />
+      <h2>Dataset Samples</h2>
+      <p>Sample audios and labels from the AISHELL-3 dataset (in original 44.1kHz format)</p>
 
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_org_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_org_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_org_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_org_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{cs_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-
-    <h3>Speaker Similarity</h3>
-    <!-- ######################################################################################################################## -->
-    <figure class='figure'>
-        <img src="assets/tsne_figure.png" class="figure-img img-fluid rounded" />
-        <figcaption class='figure-caption'>
-          Speaker embedding visualization using t-SNE, 
-          embeddings extracted from audio recordings are represented with dots, synthesized with crosses. 
-          From left to right: 
-          (A) validation-set recordings; 
-          (B) validation-set recordings & synthesized; 
-          (C) test-set recordings; 
-          (D) test-set recordings & synthesized. 
-          Please note that the validation set contains seen speakers while the test-set only includes unseen ones.
-        </figcaption>
-    </figure>
-
-
-    <div class='row mb-3'> <div class="col-md-12 audio-box">Validation-set Speakers</div> </div>
-    <div class="row mb-3">
-      <div class="col-md-6 audio-box">
-        Original Voice
-      </div>
-      <div class="col-md-6 audio-box">
-        Synthesized Voice
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_org_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_org_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_org_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_org_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_org_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{st_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-        <div class="col-md-6 audio-box">
-          <audio controls="controls">
-            <source src="{st_org_6}" autoplay />
-            Your browser does not support the audio element.
-          </audio>
+      <div class="row mb-3">
+        <div class="col-md-4 audio-box">
+          Sample Audios
         </div>
-        <div class="col-md-6 audio-box">
-          <audio controls="controls">
-            <source src="{st_6}" autoplay />
-            Your browser does not support the audio element.
-          </audio>      
+        <div class="col-md-8 audio-box">
+          Labels
         </div>
       </div>
+
       <div class="row mb-3 themed-grid-row">
-        <div class="col-md-6 audio-box">
+        <div class="col-md-4 audio-box">
           <audio controls="controls">
-            <source src="{st_org_7}" autoplay />
+            <source src="{raw_1}" autoplay />
             Your browser does not support the audio element.
           </audio>
         </div>
-        <div class="col-md-6 audio-box">
-          <audio controls="controls">
-            <source src="{st_7}" autoplay />
-            Your browser does not support the audio element.
-          </audio>      
+        <div class="col-md-8 audio-box">
+          在教学楼内释放大量烟雾 <br />
+          zai4 jiao4 xue2 lou2 nei4 shi4 fang4 da4 liang4 yan1 wu4
         </div>
       </div>
 
-    <div class='row mb-3'> <div class="col-md-12 audio-box">Test-set Speakers</div> </div>
-    <div class="row mb-3">
-      <div class="col-md-6 audio-box">
-        Original Voice
-      </div>
-      <div class="col-md-6 audio-box">
-        Synthesized Voice
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_org_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_1}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_org_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_2}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_org_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_3}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_org_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_4}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_org_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="col-md-6 audio-box">
-        <audio controls="controls">
-          <source src="{sv_5}" autoplay />
-          Your browser does not support the audio element.
-        </audio>      
-      </div>
-    </div>
-    <div class="row mb-3 themed-grid-row">
-        <div class="col-md-6 audio-box">
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
           <audio controls="controls">
-            <source src="{sv_org_6}" autoplay />
+            <source src="{raw_2}" autoplay />
             Your browser does not support the audio element.
           </audio>
         </div>
-        <div class="col-md-6 audio-box">
-          <audio controls="controls">
-            <source src="{sv_6}" autoplay />
-            Your browser does not support the audio element.
-          </audio>      
+        <div class="col-md-8 audio-box">
+          不过英特尔之后不会继续接受如此大的损失 </br>
+          bu2 guo4 ying1 te4 er3 zhi1 hou4 bu2 hui4 ji4 xu4 jie1 shou4 ru2 ci3 da4 de5 sun3 shi1
         </div>
       </div>
 
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{raw_3}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          替我播放相思风雨中 <br />
+          ti4 wo3 bo1 fang4 xiang1 si1 feng1 yu3 zong1
+        </div>
+      </div>
 
+      <br />
+      <h2> Synthesis Samples </h2>
+      <p class='lead'>
+        The following section exhibits audio samples generated by Tacotron trained on AISHELL-3.
+      </p>
+
+      <div class="row mb-3">
+        <div class="col-md-4 audio-box">
+          synthesized <B>real-speakers</B>
+        </div>
+        <div class="col-md-8 audio-box">
+          Labels
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_real_1}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          北京上海等一线城市土地市场持续火爆 
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_real_2}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          持起红缨枪追赶对方半公里
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_real_3}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          由一个人的知识系统规定了的特定形式结构和意义的句子的数目也是无线的
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_real_4}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          而上年同期为盈利三百四十一点五万元
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4 audio-box">
+          synthesized <b>sampled-speakers</b>
+        </div>
+        <div class="col-md-8 audio-box">
+          Labels
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_sam_1}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          智能电子设备所具有的能力也越来越丰富 
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_sam_2}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          智能电子设备所具有的能力也越来越丰富
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_sam_3}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          中国吉林网讯今年二九岁的农安县合隆镇人王源 
+        </div>
+      </div>
+
+      <div class="row mb-3 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{taco_sam_4}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-8 audio-box">
+          所以在乔姆斯基的四种类型的文法中最适合描写自然语言的还是上下文无关文法
+        </div>
+      </div>
+
+      <br />
+      <h2> Cross-Speaker Migration Duration on Fastspeech </h2>
+
+      <div class="row mb-3">
+        <div class="col-md-4 audio-box">
+          Fastspeech + DM
+        </div>
+        <div class="col-md-4 audio-box">
+          Fastspeech raw
+        </div>
+        <div class="col-md-4 audio-box">
+          Label
+        </div>
+      </div>
+
+      <div class="row mb-4 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_a_1}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_b_1}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          让科技能够普罗大众需要解决三大问题 
+        </div>
+      </div>
+
+      <div class="row mb-4 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_a_2}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_b_2}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          并对中心设立的北京马拉松反兴奋剂教育点大加赞赏
+        </div>
+      </div>
+
+      <div class="row mb-4 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_a_3}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_b_3}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          虽然公司该季丽润同比增长百分之二十六 
+        </div>
+      </div>
+
+      <div class="row mb-4 themed-grid-row">
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_a_4}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          <audio controls="controls">
+            <source src="{fastdb_b_4}" autoplay />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="col-md-4 audio-box">
+          北京上海等一线城市土地市场持续火爆 
+        </div>
+      </div>
+
+      <br />
+      <h2> Determining the mutual-exclusive threshold <i>d</i></h2>
+      <p>
+        When counting the number of distinct voices from a pool of sampled voiced U,
+        we define two voices are mutually-exlusive if their respective mean embedding in the SV embedding space
+        share a cosine-similarity of less than d. (see Section. 4.5 of the paper) This threshold d is chosen to
+        be the 5% quantile (ppf(0.05)) of the fitted distribution of the distance between known sample points and their
+        respective class-mean.
+
+        We first gather data for this analysis by calculating the similairty between all ground-truth samples and their
+        speaker mean embeddings.
+        The distribution of the collected data are fitted using the python package <a href="https://pypi.org/project/fitter/1.0.0/">`Fitter`</a>, which tries to fit the
+        given dataset using
+        common distributions and report the top-k best choices. The best fitted distribution we chose is the
+        <a
+          href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.loggamma.html?highlight=loggamma#scipy.special.loggammas">
+          loggmma distribution
+        </a>.
+      </p>
+
+
+      <figure class='figure'>
+        <img src="assets/loggmma.png" class="figure-img img-fluid rounded" />
+        <figcaption class='figure-caption'>
+          Figure 1. shows the histogram, distribution pdf and chosen threshold d (red vertical line) for SV system
+          <i>ecapa-tdnn</i>
+        </figcaption>
+      </figure>
 
 
   </div>
