@@ -1,0 +1,30 @@
+{
+    "raw_1": "audios/raw/raw1.wav",
+    "raw_2": "audios/raw/raw2.wav",
+    "raw_3": "audios/raw/raw3.wav",
+
+
+    "taco_real_1": "audios/mos_data/taco_real_1.wav",
+    "taco_real_2": "audios/mos_data/taco_real_2.wav",
+    "taco_real_3": "audios/mos_data/taco_real_3.wav",
+    "taco_real_4": "audios/mos_data/taco_real_4.wav",
+
+
+    "taco_sam_1": "audios/mos_data/taco_sam_1.wav",
+    "taco_sam_2": "audios/mos_data/taco_sam_2.wav",
+    "taco_sam_3": "audios/mos_data/taco_sam_3.wav",
+    "taco_sam_4": "audios/mos_data/taco_sam_4.wav",
+
+
+    "fastdb_a_1": "audios/ab_data/fastdb_b_1.wav",
+    "fastdb_b_1": "audios/ab_data/fastdb_a_1.wav",
+
+    "fastdb_a_2": "audios/ab_data/fastdb_b_2.wav",
+    "fastdb_b_2": "audios/ab_data/fastdb_a_2.wav",
+
+    "fastdb_a_3": "audios/ab_data/fastdb_b_3.wav",
+    "fastdb_b_3": "audios/ab_data/fastdb_a_3.wav",
+
+    "fastdb_a_4": "audios/ab_data/fastdb_b_4.wav",
+    "fastdb_b_4": "audios/ab_data/fastdb_a_4.wav"
+}
