@@ -7,7 +7,7 @@
   <title>VoiceLens Supplementary Materials</title>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
   <!-- mathjax for latex math formulae: -->
@@ -37,7 +37,7 @@
 <body class="py-4" style='font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;'>
   <div class="container col-md-8">
 
-    <h4 class='display-5'><span class='text-success'>[Site Under construction] Supplementary Samples for</span></h1>
+      <h4 ><span class='text-success'>[Site Under construction] Supplementary Materials for</span></h4>
       <h1 class='display-3'> <span class='text-success'>VoiceLens:</span></h1>
       <h1 class="display-4">Controllable Speaker Generation & Editing with Flow</h1>
       <p class='lead'>
@@ -50,9 +50,8 @@
       <ul class='lead'>
         <li>SHI, Yao (Wuhan University, Duke-Kunshan University)</li>
 
-        <li>DING, Chen (SAMI Bytedance)</li>
-        <li>XIA, Rui (SAMI Bytedance)</li>
-        <li>HUANG, Chuanzeng (SAMI Bytedance)</li>
+        <li>DING, Chen (Bytedance)</li>
+        <li>HUANG, Chuanzeng (Bytedance)</li>
 
         <li>LI, Ming (Duke-Kunshan University, Wuhan University) ······ <a
             href="mailto:ming.li369@dukekunshan.edu.cn">ming.li369@dukekunshan.edu.cn</a></li>
@@ -61,29 +60,32 @@
       <div style="visibility: hidden;"><audio id="global-player" controls="controls"><source src="" autoplay /></audio></div>
 
       <h2>Abstract</h2>
-      <p>
-        Many multi-speaker speech synthesis and voice conversion systems address speaker variations with an embedding vector. 
-        Modeling it directly allows new voices outside of training data to be synthesized. 
-        GMM based approaches such as Tacospawn are favored in past literature for this generation task, 
-        but have seen their limitations when difficult conditionings are involved. 
-      </p>
-      <p>
 
-        In this paper, we propose VoiceLens, a semi-supervised flow-based approach to modeling speaker embedding distributions for multi-conditional speaker generation. 
-        VoiceLens invertiblely maps speaker embeddings into a combination of independent attributes and residual information. 
-        It allows new voices associated with certain attributes to be <b><i>generated</i></b> for existing TTS models, 
-        and attributes of known voices meaningfully <b><i>edited</i></b>. 
-        We show in this paper, VoiceLens displays unconditional generation capacity that is on par with Tacospawn 
-        while attaining higher controllability and flexibility when conditioned. 
-        In addition, we show synthesizing less noisy speech from known noisy speakers without re-training the TTS system is possible via solely editing their embeddings with a SNR conditioned VoiceLens model. 
+      <p>
+        Currently, many multi-speaker speech synthesis and voice conversion systems address speaker variations with an embedding vector. 
+        Modeling it directly allows new voices outside of training data to be synthesized. 
+        GMM based approaches such as Tacospawn are favored in literature for this generation task, 
+        but there are still some limitations when difficult conditionings are involved. 
       </p>
+      <p>
+        In this paper, we propose VoiceLens, a semi-supervised flow-based approach, 
+        to model speaker embedding distributions for multi-conditional speaker generation. 
+        VoiceLens maps speaker embeddings into a combination of independent attributes and residual information. 
+        It allows new voices associated with certain attributes to be <b><i>generated</i></b> for existing TTS models, 
+        and attributes of known voices to be meaningfully <b><i>edited</i></b>. We show in this paper, 
+        VoiceLens displays an unconditional generation capacity that is similar to Tacospawn 
+        while obtaining higher controllability and flexibility when used in a conditional manner. 
+        In addition, we show synthesizing less noisy speech from known noisy speakers without re-training the TTS model is possible 
+        via solely editing their embeddings with a SNR conditioned VoiceLens model. 
+        This web page provides demos and further explainations to the submitted paper.
+      </p> 
 
 
 
       <br />
       <h2>Method Overview</h2>
       <p>
-        Figure 1 below is an illustrated overview of the proposed VoiceLens workflow. 
+        Figure 1 and 2 below is an illustrated overview of the proposed VoiceLens workflow. 
         Given a trained Multispeaker TTS system, a set of known speaker embedding vectors (\(\mathbf{e}\)) and the speakers' partially labeled attributes (\(\mathbf{y}\))
         (such as gender, age-group or general SNR level), 
         a Normalizing Flow is trained in a semi-supervised manner to model the conditional distribution \(p(\mathbf{e}|\mathbf{y})\) of the speaker embedding conditioning on the modeled attributes. 
@@ -95,12 +97,19 @@
       </p>
 
       <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <figure class='figure'>
+            <img src="assets/img/diagrams-environment.png" class="figure-img img-fluid rounded" />
+            <figcaption class='figure-caption'>
+              Figure 1. Usage of our Speaker Generation Model</i>
+            </figcaption>
+          </figure>
+        </div>
         <div class="col-md-8">
           <figure class='figure'>
             <img src="assets/img/diagrams-overview.png" class="figure-img img-fluid rounded" />
             <figcaption class='figure-caption'>
-              Figure 1. Overview of VoiceLens Workflow</i>
+              Figure 2. Overview of VoiceLens Workflow</i>
             </figcaption>
           </figure>
         </div>
@@ -141,15 +150,33 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/synthesis/0.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_clean/0.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_nearest_syn/0.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
           </tr> 
           <tr>
             <td>2</td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/synthesis/2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_clean/2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_nearest_syn/2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr> 
+          <tr>
+            <td>3</td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/synthesis/4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_clean/4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_nearest_syn/4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr> 
+          <tr>
+            <td>4</td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/synthesis/6.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_clean/6.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_nearest_syn/6.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr> 
+          <tr>
+            <td>5</td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/synthesis/9.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_clean/9.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/uncond/naf_nearest_syn/9.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
           </tr> 
         </tbody>
       </table>
@@ -191,66 +218,66 @@
         </tr>
         <tr>
           <td>Melspec</td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-20.PNG" onclick="clk_img()"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-30.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-40.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-50.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-60.PNG"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-20.png" onclick="play_audio('assets/waves/cond/snr_fc_20.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-30.png" onclick="play_audio('assets/waves/cond/snr_fc_30.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-40.png" onclick="play_audio('assets/waves/cond/snr_fc_40.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-50.png" onclick="play_audio('assets/waves/cond/snr_fc_50.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-60.png" onclick="play_audio('assets/waves/cond/snr_fc_60.wav')"></td>
         </tr>
         
 
         <tr>
           <td rowspan="2">male child</td>
           <td>SNR/dB</td>
-          <td>23.501</td>
-          <td>31.815</td>
-          <td>36.330</td>
-          <td>42.908</td>
-          <td>53.411</td>
+          <td>21.963</td>
+          <td>30.903</td>
+          <td>39.134</td>
+          <td>54.380</td>
+          <td>64.139</td>
         </tr>
         <tr>
           <td>Melspec</td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-20.PNG" onclick="clk_img()"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-30.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-40.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-50.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-60.PNG"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-mc-20.png" onclick="play_audio('assets/waves/cond/snr_mc_20.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-mc-30.png" onclick="play_audio('assets/waves/cond/snr_mc_30.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-mc-40.png" onclick="play_audio('assets/waves/cond/snr_mc_40.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-mc-50.png" onclick="play_audio('assets/waves/cond/snr_mc_50.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-mc-60.png" onclick="play_audio('assets/waves/cond/snr_mc_60.wav')"></td>
         </tr>
 
         <tr>
           <td rowspan="2">female adult</td>
           <td>SNR/dB</td>
-          <td>23.501</td>
-          <td>31.815</td>
-          <td>36.330</td>
-          <td>42.908</td>
-          <td>53.411</td>
+          <td>25.908</td>
+          <td>31.723</td>
+          <td>44.460</td>
+          <td>47.382</td>
+          <td>55.932</td>
         </tr>
         <tr>
           <td>Melspec</td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-20.PNG" onclick="clk_img()"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-30.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-40.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-50.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-60.PNG"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fa-20.png" onclick="play_audio('assets/waves/cond/snr_fa_20.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fa-30.png" onclick="play_audio('assets/waves/cond/snr_fa_30.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fa-40.png" onclick="play_audio('assets/waves/cond/snr_fa_40.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fa-50.png" onclick="play_audio('assets/waves/cond/snr_fa_50.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fa-60.png" onclick="play_audio('assets/waves/cond/snr_fa_60.wav')"></td>
         </tr>
 
         <tr>
           <td rowspan="2">male adult</td>
           <td>SNR/dB</td>
-          <td>23.501</td>
-          <td>31.815</td>
-          <td>36.330</td>
-          <td>42.908</td>
-          <td>53.411</td>
+          <td>19.184</td>
+          <td>26.030</td>
+          <td>41.676</td>
+          <td>49.363</td>
+          <td>63.753</td>
         </tr>
         <tr>
           <td>Melspec</td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-20.PNG" onclick="clk_img()"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-30.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-40.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-50.PNG"></td>
-          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-fc-60.PNG"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-ma-20.png" onclick="play_audio('assets/waves/cond/snr_ma_20.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-ma-30.png" onclick="play_audio('assets/waves/cond/snr_ma_30.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-ma-40.png" onclick="play_audio('assets/waves/cond/snr_ma_40.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-ma-50.png" onclick="play_audio('assets/waves/cond/snr_ma_50.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/conditioned/snr-ma-60.png" onclick="play_audio('assets/waves/cond/snr_ma_60.wav')"></td>
         </tr>
       </table>
     
@@ -261,12 +288,11 @@
       <h3>3.1: Flipping Categorical Attributes (gender-swapping)</h3>      
 
       <p>
-        The following table presents 
-      </p>
-      <p>
-        The following table presents synthesis results based on real and edited speaker embeddings as descirbed by Figure 1.
-        For each row, we choose a evaluation sentence of a known speaker, examine the recording and a parallel synthesis result. 
-
+        The following table showcases speaker editing on two categorical attributes <i>gender</i> and <i>age-group</i>.
+        For each case, we choose one real male adult speaker from the train speakers, 
+        presents one sample utterance from the dataset and conventional synthesis result in <b>recording</b> and <b>synthesized</b> columns.
+        Then, we set the \(z_{gender}\) and \(z_{age}\) to a new value sampled from the known prior distributions \(p(z_{gender}|\text{female})\) and \(p(z_{age}|\text{child})\) respectively.
+        The edited voices are presented in the <b>flip gender</b> and <b>flip age-group</b> respectively.
       </p>
       <table class="table table-hover" style="text-align: center;">
         <thead>
@@ -281,18 +307,18 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_1_org.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_1_syn.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_1_gender.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_1_age.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
           </tr>
           
           <tr>
             <td>2</td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
-            <td><button type="button" class="btn btn-default" onclick="console.log('btn')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_2_org.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_2_syn.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_2_gender.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/edit/edit_flip_2_age.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
           </tr>
         </tbody>
 
@@ -302,10 +328,191 @@
 
       <br/>
       <h3>3.2: Adjusting Continuous Attributes (de-noising)</h3>
+      <p>
+        The following table showcases speaker editing on the SNR attribute. For each case, a known low SNR train speaker is 
+        selected and his/her recording and conventional synthesis sample shown in the first two columns.
+        We then manully set the \(z_{snr}\) value to around 45 and synthesize the edited speaker in the <b>edited</b> columns.
+      </p>
+      <p class="lead">
+        <mark>Left click on the mel-spectrogram images to play samples!</mark>
+      </p>
+      
+      <table class="table table-hover">
+        <tr>
+          <td></td>
+          <td>source</td>
+          <td>recording</td>
+          <td>synthesis</td>
+          <td>edited</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">1</td>
+          <td>SNR/dB</td>
+          <td>20.25</td>
+          <td>19.28</td>
+          <td>45.76</td>
+        </tr>
+
+        <tr>
+          <td>Melspec</td>
+          <td><img class="figure-img img-fluid " src="assets/img/edit/edit-snr-1-org.png" onclick="play_audio('assets/waves/edit/edit_snr_1_org.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/edit/edit-snr-1-syn.png" onclick="play_audio('assets/waves/edit/snr_edit_1_syn.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/edit/edit-snr-1-edit.png" onclick="play_audio('assets/waves/edit/snr_edit_1_edit.wav')"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">1</td>
+          <td>SNR/dB</td>
+          <td></td>
+          <td>24.443</td>
+          <td>45.856</td>
+        </tr>
+
+        <tr>
+          <td>Melspec</td>
+          <td><img class="figure-img img-fluid " src="assets/img/edit/edit-snr-2-org.png" onclick="play_audio('assets/waves/edit/edit_snr_2_org.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/edit/edit-snr-2-syn.png" onclick="play_audio('assets/waves/edit/edit_snr_2_syn.wav')"></td>
+          <td><img class="figure-img img-fluid " src="assets/img/edit/edit-snr-2-edit.png" onclick="play_audio('assets/waves/edit/edit_snr_2_edit.wav')"></td>
+        </tr>
+
+      </table>
 
 
       <br/>
-      <h3>3.3: More De-noising Samples</h3>
+      <h3>3.3 More Examples on Speaker De-Noising</h3>
+      <p>
+        We selected 199 known speakers with SNR levels lower than 30dB in synthesis and boosted their SNR level by around 14.5dB via speaker editing as described in our paper.
+        We conducted MOS similarity test on a random subset of these speakers and found a relative similarity loss of 0.44. And further observed that 
+        76% of these speakers have a insignificant similarity difference before and after editing.
+      </p>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <figure class='figure'>
+            <img src="assets/img/diagrams-denoise.png" class="figure-img img-fluid rounded" />
+            <figcaption class='figure-caption'>
+              Figure 3.  SNR controllability (a) regression between \(z_{snr}\) and resultant SNR. (b) SNR boost of 199 known noise speakers via editing.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <p>
+        We show here samples of editing at different similarity levels as measured by our subjective tests.
+      </p>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td colspan="6">samples with \(\le0.28\) SMOS loss, takes up ~ 32% of samples</td>
+          </tr>
+        </thead>
+        <tr>
+          <td>synthesis</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/1184_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/1488_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/16_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/604_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/549_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+
+        <tr>
+          <td>edited</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1184_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1488_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/16_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/604_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/549_1.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+      </table>
+
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td colspan="6">samples with \(\in(0.28 \sim 0.56)\) SMOS loss, takes up ~ 53% of samples</td>
+          </tr>
+        </thead>
+        <tr>
+          <td>synthesis</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/1187_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/468_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/941_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/1035_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/564_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+
+        <tr>
+          <td>edited</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1187_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/468_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/941_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1035_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/564_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+      </table>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td colspan="3">samples with \(\ge1.12\) SMOS loss, takes up ~ 4% of samples (only slight mismatch)</td>
+          </tr>
+        </thead>
+        <tr>
+          <td>synthesis</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/1331_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_noisy/1370_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+
+        <tr>
+          <td>edited</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1331_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1370_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+      </table>
+
+      <!-- <br/>
+      <h2>Generative Capacity under Conditions</h2>
+
+      <p>
+        We reported the approximated clique-number \(\omega(G)\) of the <i>mutually-exclusive</i> graph \(G\) generated 
+        by speaker verification embeddings of generated speakers under some pre-defined threshold \(d\).
+        Due to page constraints, we only included results from the proposed VoiceLens model and Tacospawn in the marginal case (no age/gender conditions) in the submitted paper.
+        Here we provide full \(\omega(G)\) estimations under every condition we modeled and give more intuition
+        on what \(\omega(G)\) reflects.
+      </p>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <figure class='figure'>
+            <img src="assets/img/diagrams-wg.png" class="figure-img img-fluid rounded" />
+            <figcaption class='figure-caption'>
+              Figure 4. \(\omega(G)\) estimation by conditions (gender/age/SNR). 
+              <p style="text-indent: 0em">
+                Here, the vertical axis marks variations in SNR conditions. And the left/right contrast marks genders. 
+                sub-figure (a) contains results marginalized over gender and age, which is the same graph included in the submitted paper.
+                (b) contains results for male and female speakers sampled from the <i>child</i> group.
+                (c) contains results for male and female speakers sampled from the <i>adult</i> group.
+              </p>
+              <p>
+                For each sub-figure, three pieces of information are illustrated. 
+                1. a dashed vertical line indicating Tacospawn performance as Tacospawn lacks SNR controllability. 
+                2. a solid colored line indicating VoiceLens performance under each conditions.
+                3. a hatched region depicting a histogram of train-speaker SNR levels under each condition.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>
+        Figure 4 depicts \(\omega(G)\) estimations for every available conditions in our system. This number gives a 
+      </p> -->
+
+      <br/>
+
+
 
   </div>
 
