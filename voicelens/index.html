@@ -42,6 +42,7 @@
       <h1 class="display-4">Controllable Speaker Generation & Editing with Flow</h1>
       <p class='lead'>
         Arxiv: <a href=".">not yet available</a>  </br>
+        Rebuttal Materials: <a href="#rebuttal-position">click here</a>  </br>
       </p>
       <p class='lead'></p>
       <br />
@@ -474,6 +475,111 @@
           <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/similarity/sim_edit/1370_0.test.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
         </tr>
       </table>
+
+      <br/>
+      <h1 id="rebuttal-position">4. Additional Experimental Results</h1>
+      <br/>
+      <h2>4.1 Per-utterance MOS analysis.</h2>
+
+      <figure class='figure'>
+        <img src="assets/img/perutt_mos.png" class="figure-img img-fluid rounded" />
+        <figcaption class='figure-caption'>
+          Figure 4. boxplot of per utterance MOS for recorded speech.</i>
+        </figcaption>
+      </figure>
+
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td colspan="8">generated (young, old) speaker paris.</td>
+          </tr>
+        </thead>
+        <tr>
+          <td>utt-id</td>
+          <td><span class="text-danger">0</span></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>sample</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/0.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/6.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+        <tr>
+          <td>utt-id</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td><span class='text-danger'>14</span></td>
+        </tr>
+        <tr>
+          <td>sample</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/7.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/8.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/9.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/10.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/11.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/12.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/13.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/mos-recorded/14.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+
+        </tr>
+      </table>
+
+
+      <br/>
+      <h1><span class="text-warning">(ongoing experiments:)</span></h1>
+      <h2> Demo 4: Adult Speaker Age Adjustments</h2>
+      <p>
+        Using an internal corpus with ~1800 adult Mandarin speakers annotated with ~15-year-interval age-groups,
+        we try to model age variation in adult speakers as a continuous condition for voicelens. 
+        Following is our preliminary results of generated (young, old) voice pairs. 
+        (the base VITS model is not fully optimized and the generated samples contains noticable artifacts.)
+
+
+      </p>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td colspan="7">generated (young, old) speaker paris.</td>
+          </tr>
+        </thead>
+        <tr>
+          <td>young</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-1-young.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-2-young.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-3-young.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-4-young.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-5-young.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-6-young.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+
+        <tr>
+          <td>old</td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-1-old.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-2-old.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-3-old.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-4-old.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-5-old.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/young-old/ssb24e-6-old.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+        </tr>
+      </table>
+
 
       <!-- <br/>
       <h2>Generative Capacity under Conditions</h2>
