@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Vclip Supplementary Materials</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+  <!-- mathjax for latex math formulae: -->
+
+  <link rel="dns-prefetch" href="http://cdn.mathjax.org">
+  <script type="text/javascript" async
+  src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script rel="text/javascript" src="script.js"></script>
+  <link rel='stylesheet' href='css/base.css'>
+
+  <style>
+    p{
+      text-indent:0.5in
+    }
+
+    .lead{
+      text-indent: 0%;
+    }
+
+    .enlarge-on-hover:hover {
+        transform: scale(1.5);
+    }
+
+  </style>
+</head>
+
+
+<body class="py-4" style='font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;'>
+  <div class="container col-md-8">
+
+      <h4 ><span class='text-danger'>Supplementary Materials for</span></h4>
+      <h1 class='display-3'> <span class='text-danger'>Vclip:</span></h1>
+      <h1 class="display-4">Face-based Speaker Generation by Face-voice Association Learning</h1>
+      <p class='lead'></p>
+      <br />
+
+      <h2 id="authors">Authors</h2>
+      <ul class='lead'>
+        <li>SHI, Yao (OPPO) ······ <a href="mailto:shiyao1@oppo.com">shiyao1@oppo.com</a></li>
+
+        <li>XU, Yunfei (OPPO)</li>
+        <li>SUO, Hongbin (OPPO)</li>
+        <li>WAN, Yulong (OPPO)</li>
+        <li>LIU, Haifeng (University of Science and Technology of China)</li>
+
+      </ul>
+
+      <div style="visibility: hidden;"><audio id="global-player" controls="controls" src="" autoplay>/audio></div>
+
+      <!-- <h2>Abstract</h2>
+
+      <p>
+        This paper discusses the task of face-based speech synthesis, 
+        a kind of personalized speech synthesis where the synthesized voices are constrained to perceptually match with a reference face image.
+        Due to the lack of TTS-quality audio-visual corpora, 
+        previous approaches suffers from either low synthesis quality or domain mismatch induced by a knowledge transfer scheme.
+      </p>
+      <p>
+        This paper proposes a new approach called <b><i>Vclip</i></b> that utilizes 
+        the facial-semantic knowledge of the CLIP encoder on noisy audio-visual data to learn the association between face and voice efficiently, 
+        achieving 89.63% cross-modal verification AUC score on Voxceleb testset.
+        The proposed method then uses a retrieval-based strategy, combined with GMM-based speaker generation module for a downstream TTS system, 
+        to produce probable target speakers given reference images. 
+        Experimental results demonstrate that the proposed Vclip system in conjunction with the retrieval step 
+        can bridge the gap between face and voice features for face-based speech synthesis.
+        And using the feedback information distilled from downstream TTS helps to synthesize voices that match closely with reference faces. 
+      </p> -->
+
+
+      <br/>
+      <h2>Demo 1: Face-based Speaker Generation</h2>
+
+      <p>
+        We use voxceleb1 face images provided in <a href="https://www.robots.ox.ac.uk/~vgg/research/CMBiometrics/">this link</a> throughout our synthesis demos.
+        To demonstrate the capacity of the proposed <i>generate-and-retrive</i> strategy to face-based speaker generation. 
+        We synthesize sample speech for the top-1 generated speaker for each face image below.
+      </p>
+
+      <p class="lead">
+        <mark>Left click on the images to play generated samples!</mark>
+      </p>
+      <table class="table table-condensed table-hover">
+        <tr>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-0.png" onclick="play_audio('assets/waves/proposed/proposed-0.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-1.png" onclick="play_audio('assets/waves/proposed/proposed-1.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-2.png" onclick="play_audio('assets/waves/proposed/proposed-2.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-3.png" onclick="play_audio('assets/waves/proposed/proposed-3.wav')"></td>
+        </tr>
+        <tr>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-4.png" onclick="play_audio('assets/waves/proposed/proposed-4.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-5.png" onclick="play_audio('assets/waves/proposed/proposed-5.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-6.png" onclick="play_audio('assets/waves/proposed/proposed-6.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-7.png" onclick="play_audio('assets/waves/proposed/proposed-7.wav')"></td>
+        </tr>
+        <tr>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-8.png" onclick="play_audio('assets/waves/proposed/proposed-8.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-9.png" onclick="play_audio('assets/waves/proposed/proposed-9.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-10.png" onclick="play_audio('assets/waves/proposed/proposed-10.wav')"></td>
+          <td><img class="figure-img img-fluid enlarge-on-hover" src="assets/images/proposed/proposed-11.png" onclick="play_audio('assets/waves/proposed/proposed-11.wav')"></td>
+        </tr>
+      </table>
+
+    <br/>
+
+    <h2>Demo 2: Generating Multiple Probable Candidates</h2>
+    <p>
+        We cast face-base speech synthesis as a conditional speaker generation task aiming to produce probable candidate synthesis voices for reference faces.
+        <b>Mutliple equally-probable candidate voices may be proposed in our retrival stage.</b>
+        Here we demonstrate synthetic speech from top-5 retrival result given a single reference face. 
+        We note the voices in each group sound different but shares common speaker attributes and are all probable matches 
+    </p>
+
+    <table class="table table-hover" style="text-align: center;">
+        <thead>
+          <tr>
+            <td>Reference Face</td>
+            <td colspan="5">Top-5 generated</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/groups/1.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/1-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/1-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/1-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/1-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/1-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+          
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/groups/2.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/2-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/2-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/2-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/2-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/groups/2-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <br/>
+
+
+    <h2>Demo 3: Retriving <i>Existing Speech</i> with Vclip</h2>
+    <p>
+        We construct a gallery of audio-visual data from 500 unseen speakers (in validation dataset) from Voxceleb2.
+        Each speaker contributes 10 random face-voice pairs to this gallery, resulting in total of 5000 samples.
+        We then perform top-5 Face-to-Voice retrival for this demo.
+        Note that although the exact voice behind the photo nearly always fails to present on the top-5 list (We measured a retrival mAP of 8.62 on this gallery).
+        <b>The retrived voice convey meaningful information about the query face image, as attributes such as language, dialect, ethnicity are consistent with the query image and across retival results.</b>
+        
+        We believe this result demostrate that our vclip model captures rich variations across these factors, and only those coincides with LibriTTS are successfully transfered.
+        This begs the question of the viability of incoporating Vclip into more expressive approaches to TTS such as BARK.
+    </p>
+    <table class="table table-hover" style="text-align: center;">
+        <thead>
+          <tr>
+            <td>Query Face</td>
+            <td colspan="5">Top-5 Retrived</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/vclip/1.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/1-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/1-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/1-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/1-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/1-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/vclip/2.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/2-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/2-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/2-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/2-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/2-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/vclip/3.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/3-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/3-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/3-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/3-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/3-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/vclip/4.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/4-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/4-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/4-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/4-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/4-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/vclip/5.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/5-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/5-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/5-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/5-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/5-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+
+          <tr class="align-middle">
+            <td><img class="figure-img img-fluid enlarge-on-hover" width="100px" src="assets/images/vclip/6.png"></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/6-1.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/6-2.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/6-3.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/6-4.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+            <td><button type="button" class="btn btn-default" onclick="play_audio('assets/waves/vclip/6-5.wav')"><i class="far fa-lg fa-play-circle"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    <br/>
+
+  </div>
+
+
+</body>
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="bootstrap-4.5.2-dist/js/bootstrap.bundle.js"></script> -->
+
+</html>
